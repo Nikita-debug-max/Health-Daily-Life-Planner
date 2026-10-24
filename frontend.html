@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health and daily life planner</title>
+    <title>Health and Daily Life Planner</title>
 </head>
+    <link rel="stylesheet" href="frontend.css">
 <body>
+    <header>
+        <h1>Health & Daily Life Planner</h1>
+        <p>Plan your day.Improve your health!.</p>
+    </header>
+  
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#tasks"> My Tasks</a>
+    <a href="#health">Health Tracker</a>
+    <a href="#meal">Meal Planner</a>
+    <a href="#progress">Progress Reports</a>
+<a href="#reminders">Reminders</a>
+  </nav>
+  <main>
+    <section id="dashboard">
+        <h1>Welcome to your Dashboard!</h1>
+        <p>Manage your Tasks and Track your Health</p>
+    </section>
     
+          <section id="tasks">
+            <h2>Daily Task Planner</h2>
+            <input type="text" id="taskInput"
+                   placeholder="Enter your task">
+            <button id="addTaskBtn">Add Task</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="health">
+            <h2>Health Tracker</h2>
+            <p>Water intake: Track your glasses of water.</p>
+            <p>Sleep: Record your sleeping hours.</p>
+            <p>Exercise: Track your daily activity.</p>
+        </section>
+
+        <section id="meals">
+            <h2>Meal Planner</h2>
+            <p>Breakfast | Lunch | Snacks | Dinner</p>
+        </section>
+        
+<!-- Progress Report Section -->
+<section id="progress">
+    <h2>📊 Progress Reports</h2>
+
+    <div class="progress-card">
+        <h3>Task Completion</h3>
+        <p>Daily tasks completed: <span id="completedTasks">0</span></p>
+        <progress id="taskProgress" value="0" max="100"></progress>
+        <p><span id="progressPercent">0</span>% completed</p>
+    </div>
+
+    <div class="progress-card">
+        <h3>Health Summary</h3>
+        <p>Water intake: Track your daily water consumption.</p>
+        <p>Sleep: Review your sleeping hours.</p>
+        <p>Exercise: Review your daily activity.</p>
+    </div>
+
+    <div class="progress-card">
+        <h3>Weekly Progress</h3>
+        <p>View your weekly task and health progress here.</p>
+    </div>
+</section>
+
+<!-- Reminder Section -->
+<section id="reminders">
+    <h2>🔔 Reminders</h2>
+
+    <form id="reminderForm">
+        <label for="reminderText">Reminder name:</label>
+        <input type="text" id="reminderText"
+               placeholder="e.g. Drink water" required>
+
+        <label for="reminderTime">Reminder date and time:</label>
+        <input type="datetime-local" id="reminderTime" required>
+
+        <button type="submit">Add Reminder</button>
+    </form>
+
+    <ul id="reminderList"></ul>
+</section>
+
+    </main>
+
+    <script src="frontend.js"></script>
+</body>
+</html>
+    </section>
+  </main>
 </body>
 </html>
