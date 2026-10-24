@@ -6,6 +6,7 @@ from flask_cors import CORS
 from health import health_bp
 from auth import auth_bp
 from tasks import tasks_bp
+from meals import meals_bp
 app = Flask(__name__)
 
 # For local development only.
@@ -22,6 +23,7 @@ CORS(app, supports_credentials=True)
 app.register_blueprint(auth_bp)
 app.register_blueprint(tasks_bp)
 app.register_blueprint(health_bp)
+app.register_blueprint(meals_bp)
 
 @app.route("/", methods=["GET"])
 def home():
